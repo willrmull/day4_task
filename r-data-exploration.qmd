@@ -1,0 +1,25 @@
+---
+title: "r-data-exploration"
+format: html
+editor: visual
+---
+
+## Day 4 Task Question 3
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(GGally)
+
+diamond <- diamonds
+ggpairs(diamond)
+
+ggplot(data = diamond, aes(x = carat, y = price)) +
+  geom_point()
+
+ggplot(data = diamond, aes(x = carat)) + 
+  geom_histogram()
+ggplot(data = diamond, aes(x = clarity)) + 
+  geom_boxplot()
+```
+
