@@ -14,12 +14,17 @@ library(GGally)
 diamond <- diamonds
 ggpairs(diamond)
 
+head(diamond)
+tail(diamond)
+summary(diamond)
+skim(diamond)
+
 ggplot(data = diamond, aes(x = carat, y = price)) +
   geom_point()
 
 ggplot(data = diamond, aes(x = carat)) + 
   geom_histogram()
-ggplot(data = diamond, aes(x = clarity)) + 
+ggplot(data = diamond, aes(x = clarity, y = price)) + 
   geom_boxplot()
 ```
 
